@@ -1,7 +1,7 @@
 import java.util.regex.*;
 
 public class Regex{
-    String myPattern = "^[A-Z][a-z]{2,}$";
+    String myPattern = "^[A-Z][a-z]{2,}[ ][A-Z][a-z]{2,}$";
 
     boolean checker(String word){
         Pattern pattern = Pattern.compile(myPattern);
@@ -10,8 +10,7 @@ public class Regex{
 
     public static void main(String[] args) {
         Regex regex = new Regex();
-        System.out.println(regex.checker("Aman"));
-        System.out.println(regex.checker("aman"));
+        System.out.println(regex.checker("Aman Rai"));
     }
 
 }
