@@ -1,7 +1,7 @@
 import java.util.regex.*;
 
 public class Regex{
-    String myPattern = "^[0-9]{2}[ ][0-9]{10}$";
+    String myPattern = "^[a-zA-Z0-9/.@/-/_]{8,}$";
 
     boolean checker(String word){
         Pattern pattern = Pattern.compile(myPattern);
@@ -10,7 +10,7 @@ public class Regex{
 
     public static void main(String[] args) {
         Regex regex = new Regex();
-        System.out.println(regex.checker("91 9893009922"));
+        System.out.println(regex.checker("Qaz@6543"));
     }
 
 }
